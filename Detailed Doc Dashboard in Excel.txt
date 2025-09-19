@@ -1,0 +1,90 @@
+Dashboard in Excel
+This document outlines the creation of an interactive Excel dashboard for analyzing Blinkit's sales performance. The project focuses on leveraging Excel's capabilities, particularly PivotTables and charts, to derive actionable insights from sales data.
+
+1. Project Overview and Objective
+The primary objective of this project is to conduct a comprehensive analysis of Blinkit's sales performance. Blinkit, an Indian grocery delivery app owned by Zomato, operates in major Indian metro cities, promising fast deliveries (within 10-15 minutes). The analysis aims to uncover key trends related to customer satisfaction, inventory, and distribution, and to present these insights through a dynamic and user-friendly Excel dashboard.
+
+The dashboard is designed to be fully dynamic, allowing users to "slice and dice" the data using filters (slicers) to gain insights from various perspectives. This project also serves as a foundational step, with future plans to replicate the analysis in other business intelligence tools like Power BI, SQL, and Tableau.
+
+2. Key Performance Indicators (KPIs) Requirements
+The project prioritizes the calculation and visualization of several Key Performance Indicators (KPIs) to provide a high-level summary of Blinkit's business performance. These KPIs are crucial for assessing the overall health and direction of the business.
+
+The required KPIs include:
+
+Total Sales: This represents "the overall revenue generated from all the items which have been sold."
+Average Sales: This indicates "average revenue per sale," calculated across all items sold.
+Number of Items: This is a count of "how many items are been sold," with each row in the dataset representing a single item sold.
+Average Rating: This metric reflects "the average ratings of the item sold," based on customer feedback (acknowledging that not all customers provide ratings).
+3. Chart Requirements and Visualizations
+To facilitate deeper data exploration and enable departmental-level decision-making, the dashboard incorporates various charts. The selection of chart types is either customer-suggested or based on best practices for effective data visualization.
+
+The required charts include:
+
+Total Sales by Fat Content (Donut Chart): This chart analyzes "the fat content on total sales" and additional metrics like average sales, number of items, and average ratings based on fat content. The customer specifically requested a donut chart for this analysis.
+Total Sales by Item Type (Bar Chart): This visualization displays "what are the different total sales which are done based on item type." It also includes analysis of average sales, number of items, and average ratings by item type.
+Fat Content by Outlet for Total Sales (Bar Chart): Similar to the item type analysis, this chart shows fat content performance across different outlets with additional metrics.
+Sales by Outlet Establishment (Line Chart): This chart visualizes "what are the total sales done" based on the establishment year of different Blinkit outlets. Outlets are geographically distributed to ensure quick deliveries. The customer requested a line chart.
+Sales by Outlet Size: This analysis examines sales performance "depending upon the size of the outlet" (e.g., high, medium, small). The visualization type is not explicitly mentioned but a donut chart is used in the example.
+Sales by Outlet Location (Funnel Chart): This focuses on sales figures based on "where the location of or that of that outlet is located" (e.g., Tier 1, Tier 2, Tier 3 cities). A funnel chart is used for this visualization.
+All Metrics by Outlet Type (Bar Charts for Total Sales, Average Sales, Number of Items): This section visualizes sales, average sales, and number of items based on different "type of the outlet" (e.g., Supermarket, Grocery Store). A matrix card format is suggested, but individual bar charts are implemented in the example. Supermarkets are dedicated Blinkit stores where customers cannot walk in, while grocery stores also serve walk-in customers and partner with Blinkit, particularly in Tier 3 cities.
+4. Data Source and Structure
+The analysis uses an Excel file containing approximately 8,500 rows and 12 columns. Each row represents a single item sold.
+
+The key columns in the dataset include:
+
+Item Fat Content: Categorizes products by fat content (e.g., 'LF', 'Low Fat', 'reg', 'Regular'). This column requires data cleaning.
+Item Identifier: A unique code for each item (e.g., 'FDX32' for fruits and vegetables).
+Item Type: Categories of items sold (e.g., 'Snack Foods', 'Soft Drinks', 'Frozen Foods', 'Health Related', 'Household Items').
+Outlet Establishment Year: The year an outlet was established, indicating its operational tenure.
+Outlet Identifier: A unique identifier for each Blinkit outlet.
+Outlet Location: Indicates the city tier (Tier 1, Tier 2, or Tier 3) where the outlet is located.
+Outlet Size: Classifies outlets as 'Small', 'Medium', or 'High'.
+Outlet Type: Differentiates between 'Supermarket' (dedicated Blinkit stores) and 'Grocery Store' (partner stores).
+Item Visibility: Represents how visible an item is when searched online.
+Item Weight: The weight of the item, which influences price and delivery charges.
+Sales: The revenue generated from a particular order (a mandatory field).
+Rating: Customer rating for the purchased order (optional field).
+5. Data Cleaning and Preparation
+Data cleaning is a critical step, constituting approximately 70% of the project's effort. It involves identifying and rectifying inconsistencies and errors in the raw data.
+
+Specific cleaning steps highlighted:
+
+Standardizing 'Item Fat Content': The column initially contains inconsistencies such as 'LF' (low fat), 'Low Fat', 'reg' (regular), and 'Regular'. The process involves using the "Find and Replace" function in Excel to standardize 'LF' to 'Low Fat' and 'reg' to 'Regular'. This often requires multiple iterations to handle partial matches (e.g., 'reg' within 'Regular' itself).
+Data Type and Value Validation:Columns like date fields (e.g., 'Outlet Establishment Year') should not have blanks or errors and must be in a correct format.
+Categorical columns (e.g., 'Outlet Location', 'Outlet Size', 'Outlet Type') are checked for correct formats and consistency.
+Numerical columns, particularly 'Sales', are considered mandatory fields that must contain values. Columns like 'Item Weight' and 'Rating' are not mandatory and can have blanks, as these values might not always be recorded.
+Adding a 'Serial Number' Column: A 'Serial Number' column is inserted to facilitate counting the number of items sold, as each row represents an item. This ensures a reliable count for the "Number of Items" KPI.
+Converting Data to an Excel Table: The raw data is converted into an Excel table (Ctrl+T) to enable easier management, filtering, and seamless integration with PivotTables.
+6. Dashboard Design and Interactivity
+The dashboard is built on a separate Excel sheet, distinct from the raw data and PivotTable design sheets, to maintain clarity and organization.
+
+Key design elements and functionalities:
+
+Layout and Theme: The dashboard incorporates a yellow and green color scheme, consistent with Blinkit's branding, to maintain uniformity.
+KPI Visualization: Dedicated "KPI holders" are designed using rounded rectangles with a gradient fill (yellow to green) for total sales and white solid fills for other KPIs. Values are pulled from PivotTables, formatted (e.g., dollar symbol, millions 'M' suffix), and displayed dynamically.
+Chart Placement: Charts are strategically placed within placeholders, separated by vertical and horizontal lines for visual distinction.
+Dynamic Filtering (Slicers): Three main slicers are used to filter the entire dashboard:
+Outlet Size: (High, Medium, Small)
+Outlet Location: (Tier 1, Tier 2, Tier 3)
+Item Type: (e.g., Breakfast, Dairy Products)
+Slicers are customized with a light yellow/Blinkit-themed style. Crucially, all PivotTables (and thus all charts and KPIs) are connected to these slicers via "Report Connections" to ensure full interactivity.
+Navigation Buttons: "Home" and "Database" buttons are linked to navigate users to the "Sheet Design" (PivotTable/chart design) and "Raw Data" sheets, respectively, enhancing usability.
+Formatting Details: Extensive formatting is applied to fonts (e.g., Lato Black, Segoe UI Semibold), colors, borders, and shadows to create a clean, professional, and visually appealing dashboard.
+7. PivotTable and Chart Creation Process
+The analysis heavily relies on PivotTables to aggregate data and generate charts.
+
+General steps for creating PivotTables and charts:
+
+Creating PivotTables: New PivotTables are created on a dedicated "Sheets Design" sheet. To avoid redundancy, existing PivotTables are copied and modified for new analyses.
+Aggregating Data: Fields are dragged into the "Values" area of the PivotTable to calculate sums, averages, or counts as required by the KPIs and chart requirements.
+Generating Charts: Charts are created directly from PivotTables (PivotChart) or from data extracted from PivotTables (for charts like Funnel charts that cannot directly use PivotTable data).
+Formatting Charts: Charts are formatted to remove unnecessary elements (e.g., gridlines, axis titles, field buttons, chart borders, and fills) and to apply specific colors, gap widths, and data labels.
+Data Labels: Data labels are added to charts to display precise values or percentages, with custom number formatting applied where needed (e.g., thousands 'K' suffix, decimal points).
+Sorting Data: Bar charts and funnel charts are sorted (e.g., largest to smallest) to improve readability and quickly identify top-performing categories.
+8. Key Takeaways and Insights from the Example Analysis
+While the briefing document primarily details the creation process, the example analysis within the source demonstrates how the dashboard can be used to derive insights:
+
+Overall Sales Performance: The initial KPIs reveal total sales (e.g., $1.20 Million), average sales per order (e.g., $141), total items sold (e.g., 8523), and average customer rating (e.g., 4.0).
+Impact of Outlet Size: Filtering by 'High', 'Medium', or 'Small' outlet sizes immediately updates all KPIs and charts, allowing for quick comparisons of sales, ratings, and item counts across different outlet scales. This shows how different sized outlets perform across various metrics.
+Dynamic Exploration: The interactive nature of the dashboard allows users to quickly explore sales trends based on different item types, outlet locations, or fat content, enabling a granular understanding of Blinkit's operational data.
+This comprehensive dashboard serves as a powerful tool for Blinkit to monitor its sales performance and make data-driven decisions across various operational dimensions.
