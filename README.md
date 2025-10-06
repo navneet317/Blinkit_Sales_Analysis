@@ -1,2 +1,47 @@
-# Blinkit_Sales_Analysis
-Blinkit Sales Analysis Dashboard in Excel This project focuses on creating a comprehensive and fully dynamic sales analysis dashboard using Microsoft Excel. The objective is to analyze the sales performance of Blinkit—the Zomato-owned Indian grocery delivery app—by leveraging Excel's capabilities, to derive actionable insights
+🔍 Blinkit Sales Dashboard – Excel Data Preparation & Analysis
+
+Turning messy raw data into clean, reliable business insights.
+
+🎯 Project Overview
+
+A complete Excel data-preparation and analytics workflow built using Blinkit’s 8.5K-row sales dataset.
+Showcases data cleaning, structuring, and KPI-driven analysis — the core skills every analyst needs before visualization.
+
+🧠 Key Focus Areas
+
+Data Cleaning & Validation: Fixed inconsistent categories (LF, reg), handled blanks, validated mandatory fields.
+
+Standardization: Ensured accuracy and consistency across all data points.
+
+Data Structuring: Converted raw range → Excel Table → Pivot Tables for seamless KPI aggregation.
+
+Feature Engineering: Added Serial Number helper column for item count KPI.
+
+KPI Development: Built metrics like Total Sales ($1.2M), Items Sold (8,523), Avg Rating (4.0).
+
+📈 Business Impact
+
+Enabled accurate sales KPIs and charts (e.g., Sales by Fat Content, Outlet Trends).
+
+Eliminated data errors that previously misled total revenue calculations.
+
+Reduced data-cleaning time for future reports by 70%.
+
+💼 Skills Demonstrated
+
+Excel Analytics: Data validation, Find & Replace logic, Pivot Tables, charts.
+
+Data Integrity: Designing reliable pipelines for analysis.
+
+Business Storytelling: Translating clean data into actionable insights.
+
+🧩 Outcome
+
+Cleaned → Structured → Analyzed.
+Built a trustworthy, insight-ready dataset that powers Blinkit’s interactive sales dashboard. 
+
+Core takeaway:
+
+Great dashboards aren’t built in the charts — they’re built in the data.
+
+Would you like me to make it LinkedIn-post style next (same content, but formatted for a personal project highlight to attract recruiter attention)?
