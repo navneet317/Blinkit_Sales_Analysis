@@ -43,5 +43,3 @@ Built a trustworthy, insight-ready dataset that powers Blinkit’s interactive s
 Core takeaway:
 
 Great dashboards aren’t built in the charts — they’re built in the data.
-
-Would you like me to make it LinkedIn-post style next (same content, but formatted for a personal project highlight to attract recruiter attention)?
